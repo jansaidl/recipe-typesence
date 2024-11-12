@@ -1,0 +1,8 @@
+#yamlPreprocessor=on
+services:
+  - hostname: typesense
+    type: "22.04"
+    buildFromGit: https://github.com/jansaidl/recipe-typesense
+    enableSubdomainAccess: true
+    envSecrets:
+      API_KEY: <@generateRandomString(<32>) | toHex>
